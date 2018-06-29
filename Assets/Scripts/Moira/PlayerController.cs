@@ -6,11 +6,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     private Animator anim;
-    private Rigidbody rb;
     [SerializeField] private Transform cameraPivot;
     [SerializeField] private Transform playerModelPivot;
     [SerializeField] private ParticleSystem healingParticles;
     [SerializeField] private ParticleSystem succ;
+    [SerializeField] private iTweenPath succPath;
+    [SerializeField] private Transform[] succPathTargets;
     [SerializeField] private float moveSpeed = 5;
     [SerializeField] private float MouseSensitivity = 150f;
 
@@ -19,7 +20,6 @@ public class PlayerController : MonoBehaviour {
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
     }
 
     private void Start()
@@ -48,6 +48,12 @@ public class PlayerController : MonoBehaviour {
         {
             anim.SetTrigger("Damage End");
         }
+        
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                anim.SetTrigger("Hello");
+        }
 
     }
 
@@ -59,6 +65,9 @@ public class PlayerController : MonoBehaviour {
 
         Vector3 deltaPos = new Vector3(movementInput.x, 0, movementInput.y) * moveSpeed * Time.deltaTime;
         transform.Translate(deltaPos);
+
+        float deltaRotX = mouseY * MouseSensitivity * Time.deltaTime;
+        float deltaRotY = mouseX * MouseSensitivity * Time.deltaTime;
 
         rotX += mouseY * MouseSensitivity * Time.deltaTime;
         rotY += mouseX * MouseSensitivity * Time.deltaTime;
@@ -72,7 +81,19 @@ public class PlayerController : MonoBehaviour {
         // give player model same rotation as camera
         playerModelPivot.RotateAround(cameraPivot.position, cameraPivot.right, mouseY * MouseSensitivity * Time.deltaTime);
         //playerModelPivot.rotation = cameraRot;
+
+        for (int i=0; i < succPath.nodeCount; i++)
+        {
+            succPath.nodes[i] = Vector3.Lerp(succPath.nodes[i], succPathTargets[i].position, 0.5f);
+        }
+
     }
+
+    private Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 eulerAngles)
+    {
+        return Quaternion.Euler(eulerAngles) * (point - pivot) + pivot;
+    }
+  
 
     public void BeginHealing()
     {

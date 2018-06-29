@@ -74,6 +74,67 @@ ModelImporter:
     100136: wrist.L.001
     100138: wrist.R
     100140: wrist.R.001
+    100142: PoleTarget.L
+    100144: PoleTarget.L_end
+    100146: PoleTarget.R
+    100148: PoleTarget.R_end
+    100150: Basic_female_rigged_Body
+    100152: clavicle_L
+    100154: clavicle_R
+    100156: finger1-1_L
+    100158: finger1-1_R
+    100160: finger1-2_L
+    100162: finger1-2_R
+    100164: finger1-3_L
+    100166: finger1-3_R
+    100168: finger2-1_L
+    100170: finger2-1_R
+    100172: finger2-2_L
+    100174: finger2-2_R
+    100176: finger2-3_L
+    100178: finger2-3_R
+    100180: finger3-1_L
+    100182: finger3-1_R
+    100184: finger3-2_L
+    100186: finger3-2_R
+    100188: finger3-3_L
+    100190: finger3-3_R
+    100192: finger4-1_L
+    100194: finger4-1_R
+    100196: finger4-2_L
+    100198: finger4-2_R
+    100200: finger4-3_L
+    100202: finger4-3_R
+    100204: finger5-1_L
+    100206: finger5-1_R
+    100208: finger5-2_L
+    100210: finger5-2_R
+    100212: finger5-3_L
+    100214: finger5-3_R
+    100216: lowerarm01_L
+    100218: lowerarm01_R
+    100220: lowerarm02_L
+    100222: lowerarm02_R
+    100224: metacarpal1_L
+    100226: metacarpal1_R
+    100228: metacarpal2_L
+    100230: metacarpal2_R
+    100232: metacarpal3_L
+    100234: metacarpal3_R
+    100236: metacarpal4_L
+    100238: metacarpal4_R
+    100240: PoleTarget_L
+    100242: PoleTarget_R
+    100244: shoulder01_L
+    100246: shoulder01_R
+    100248: upperarm01_L
+    100250: upperarm01_R
+    100252: upperarm02_L
+    100254: upperarm02_R
+    100256: wrist_L
+    100258: wrist_L_001
+    100260: wrist_R
+    100262: wrist_R_001
     400000: Basic_female_rigged
     400002: Basic_female_rigged:Body
     400004: Camera
@@ -145,9 +206,71 @@ ModelImporter:
     400136: wrist.L.001
     400138: wrist.R
     400140: wrist.R.001
+    400142: PoleTarget.L
+    400144: PoleTarget.L_end
+    400146: PoleTarget.R
+    400148: PoleTarget.R_end
+    400150: Basic_female_rigged_Body
+    400152: clavicle_L
+    400154: clavicle_R
+    400156: finger1-1_L
+    400158: finger1-1_R
+    400160: finger1-2_L
+    400162: finger1-2_R
+    400164: finger1-3_L
+    400166: finger1-3_R
+    400168: finger2-1_L
+    400170: finger2-1_R
+    400172: finger2-2_L
+    400174: finger2-2_R
+    400176: finger2-3_L
+    400178: finger2-3_R
+    400180: finger3-1_L
+    400182: finger3-1_R
+    400184: finger3-2_L
+    400186: finger3-2_R
+    400188: finger3-3_L
+    400190: finger3-3_R
+    400192: finger4-1_L
+    400194: finger4-1_R
+    400196: finger4-2_L
+    400198: finger4-2_R
+    400200: finger4-3_L
+    400202: finger4-3_R
+    400204: finger5-1_L
+    400206: finger5-1_R
+    400208: finger5-2_L
+    400210: finger5-2_R
+    400212: finger5-3_L
+    400214: finger5-3_R
+    400216: lowerarm01_L
+    400218: lowerarm01_R
+    400220: lowerarm02_L
+    400222: lowerarm02_R
+    400224: metacarpal1_L
+    400226: metacarpal1_R
+    400228: metacarpal2_L
+    400230: metacarpal2_R
+    400232: metacarpal3_L
+    400234: metacarpal3_R
+    400236: metacarpal4_L
+    400238: metacarpal4_R
+    400240: PoleTarget_L
+    400242: PoleTarget_R
+    400244: shoulder01_L
+    400246: shoulder01_R
+    400248: upperarm01_L
+    400250: upperarm01_R
+    400252: upperarm02_L
+    400254: upperarm02_R
+    400256: wrist_L
+    400258: wrist_L_001
+    400260: wrist_R
+    400262: wrist_R_001
     2000000: Camera
     2100000: Basic_female_rigged_Body_Defaultskin
     4300000: Basic_female_rigged:Body
+    4300002: Basic_female_rigged_Body
     7400000: Camera|Idle
     7400002: Basic_female_rigged|Damage_End
     7400004: Basic_female_rigged|Damage_Loop
@@ -156,12 +279,15 @@ ModelImporter:
     7400010: Basic_female_rigged|Heal_Loop
     7400012: Basic_female_rigged|Heal_Start
     7400014: Basic_female_rigged|Idle
+    7400016: Basic_female_rigged|Hello
     9500000: //RootNode
     10800000: Sun
     13700000: Basic_female_rigged:Body
+    13700002: Basic_female_rigged_Body
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -171,7 +297,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tFound
+      duplicate transform 'finger1-3.L' for human bone 'Jaw' and 'RightEye'\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -179,7 +306,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -439,6 +566,34 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Basic_female_rigged|Hello
+      takeName: Basic_female_rigged|Hello
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -483,7 +638,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
